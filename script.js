@@ -48,6 +48,8 @@ function fetchWeather(location) {
     // const url = `${apiUrl1}q=${location}&appid=${apiKey}&units=metric`;
     const urlPython = '${myURLonVercel}'
 
+    console.error(urlPython);
+
     fetch(urlPython)
         .then(response => response.json())
         .then(data => {
