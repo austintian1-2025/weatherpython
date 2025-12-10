@@ -1,5 +1,7 @@
 import random
 from fastapi import FastAPI
+from fastapi.staticfiles import StaticFiles
+from fastapi.templating import Jinja2Templates
 # from fastapi.templating import Jinja2Templates
 
 # 1. Data Source (In-Memory List)
@@ -20,6 +22,7 @@ FOOD_CHOICES = [
 # This creates the FastAPI application instance.
 app = FastAPI()
 #templates = Jinja2Templates(directory="templates") # Assuming your templates are in a 'templates' folder
+templates = Jinja2Templates(directory="templates")
 
 
 # 3. API Endpoint Definitions (the routes)
@@ -40,7 +43,7 @@ def default_route():    #route handler function
     """
     return "You have reached the test route. Back-end server is listening..."
     
-@app.get("/items")
+@app.get("/item")
 def read_items():
     html_content = """
     <html>
@@ -54,7 +57,11 @@ def read_items():
     """
     return HTMLResponse(content=html_content, status_code=200)
 
-
+@app.get("/items/", response_class=HTMLResponse)
+async def read_item(request: Request, id: str):
+    return templates.TemplateResponse(
+        request=request, name="index.html",
+    )
 
 # TO RUN:
 # 1. Put this code in api/main.py and deploy to Vercel
