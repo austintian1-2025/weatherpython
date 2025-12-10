@@ -68,7 +68,8 @@ function fetchWeather(location) {
         })
         .catch(error => {
             locationElement.textContent = "No Data Returned, Check Your Location";
-            console.error('Error fetching weather data:', error);
+            console.log(data);
+            console.log('Error fetching weather data:', error);
               temperatureElement.textContent = "";
             descriptionElement.textContent = "";
             
