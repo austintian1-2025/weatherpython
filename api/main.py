@@ -24,10 +24,10 @@ templates = Jinja2Templates(directory="templates") # Assuming your templates are
 @app.get("/hello/{name}", response_class=HTMLResponse)
 async def hello(request: Request, name: str):
     return templates.TemplateResponse("index.html", {"request": request, "name": name})
-    
+
 # 3. API Endpoint Definitions (the routes)
 # Default route
-@app.get("/new")           #endpoint, or route, always starts with a forward slash
+@app.get("/")           #endpoint, or route, always starts with a forward slash
 def default_route():    #route handler function
     """
     This is the default endpoint for this back-end.
