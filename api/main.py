@@ -27,7 +27,7 @@ def default_route():    #route handler function
     """
     This is the default endpoint for this back-end.
     """
-    data = {"name": "Alice", "age": 30, "city": "New York"}
+    data = {"name": "Alice", "age": 30, "city": "New York", "data": "This is a test"}
 
     return data
     
