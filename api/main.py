@@ -40,7 +40,7 @@ def default_route():    #route handler function
     """
     return "You have reached the default route. Back-end server is listening..."
     
-@app.get("/items/")
+@app.get("/items")
 async def read_items():
     html_content = """
     <html>
