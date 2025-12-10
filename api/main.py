@@ -22,7 +22,7 @@ app = FastAPI()
 # 3. API Endpoint Definitions (the routes)
 
 # Default route
-@app.get("/")           #endpoint, or route, always starts with a forward slash
+@app.get("/data")           #endpoint, or route, always starts with a forward slash
 def default_route():    #route handler function
     """
     This is the default endpoint for this back-end.
