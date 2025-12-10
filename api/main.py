@@ -1,5 +1,6 @@
 import random
 from fastapi import FastAPI
+from fastapi.templating import Jinja2Templates
 
 # 1. Data Source (In-Memory List)
 # This list simulates a simple, pre-defined dataset.
@@ -18,7 +19,12 @@ FOOD_CHOICES = [
 # 2. App Initialization
 # This creates the FastAPI application instance.
 app = FastAPI()
+templates = Jinja2Templates(directory="templates") # Assuming your templates are in a 'templates' folder
 
+@app.get("/hello/{name}", response_class=HTMLResponse)
+async def hello(request: Request, name: str):
+    return templates.TemplateResponse("index.html", {"request": request, "name": name})
+    
 # 3. API Endpoint Definitions (the routes)
 # Default route
 @app.get("/new")           #endpoint, or route, always starts with a forward slash
