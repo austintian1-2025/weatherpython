@@ -38,7 +38,7 @@ def default_route():    #route handler function
     """
     {main: "This is the test endpoint for this back-end."}
     """
-    return "You have reached the default route. Back-end server is listening..."
+    return "You have reached the test route. Back-end server is listening..."
     
 @app.get("/items")
 def read_items():
