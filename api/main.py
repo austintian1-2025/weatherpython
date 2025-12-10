@@ -30,7 +30,13 @@ def default_route():    #route handler function
     return "You have reached the default route. Back-end server is listening..."
     
 
-
+@app.get("/test")           #endpoint, or route, always starts with a forward slash
+def default_route():    #route handler function
+    """
+    This is the test endpoint for this back-end.
+    """
+    return "You have reached the default route. Back-end server is listening..."
+    
 
 
 
