@@ -20,7 +20,7 @@ FOOD_CHOICES = [
 
 # 2. App Initialization
 # This creates the FastAPI application instance.
-app.mount("/static", StaticFiles(directory="static"), name="static")
+# app.mount("/static", StaticFiles(directory="static"), name="static")
 
 app = FastAPI()
 #templates = Jinja2Templates(directory="templates") # Assuming your templates are in a 'templates' folder
