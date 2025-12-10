@@ -1,7 +1,7 @@
 const apiKey = '003a04db4db142f479fa9aa76d92df10';
 const apiUrl1 ='https://api.openweathermap.org/data/2.5/weather?'
 
-const myURLonVercel 'https://weatherpython.vercel.app/'
+const myURLonVercel = 'https://weatherpython.vercel.app/'
 
 const locationInput = document.getElementById('locationInput');
 const searchButton = document.getElementById('searchButton');
