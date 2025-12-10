@@ -29,17 +29,6 @@ def default_route():    #route handler function
     return "You have reached the default route. Back-end server is listening..."
     
 
-# Default route
-@app.get("/data")           #endpoint, or route, always starts with a forward slash
-def default_route():    #route handler function
-    """
-    This is the default endpoint for this back-end.
-    """
-    data = {"name": "Alice", "age": 30, "city": "New York", "data": "This is a test"}
-    headers = {"X-Custom-Header": "MyValue"}
-    return JSONResponse(content=data, headers=headers)
-
-    
 
 @app.get("/test")           #endpoint, or route, always starts with a forward slash
 def default_route():    #route handler function
