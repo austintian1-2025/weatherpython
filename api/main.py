@@ -29,7 +29,7 @@ def default_route():    #route handler function
     """
     data = {"name": "Alice", "age": 30, "city": "New York"}
 
-    return json.dumps(data)
+    return data
     
 
 @app.get("/test")           #endpoint, or route, always starts with a forward slash
