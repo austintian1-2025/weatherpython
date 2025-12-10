@@ -21,9 +21,6 @@ FOOD_CHOICES = [
 app = FastAPI()
 templates = Jinja2Templates(directory="templates") # Assuming your templates are in a 'templates' folder
 
-@app.get("/hello/{name}", response_class=HTMLResponse)
-async def hello(request: Request, name: str):
-    return templates.TemplateResponse("index.html", {"request": request, "name": name})
 
 # 3. API Endpoint Definitions (the routes)
 # Default route
