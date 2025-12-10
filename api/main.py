@@ -28,8 +28,9 @@ def default_route():    #route handler function
     This is the default endpoint for this back-end.
     """
     data = {"name": "Alice", "age": 30, "city": "New York", "data": "This is a test"}
+    headers = {"X-Custom-Header": "MyValue"}
+    return JSONResponse(content=data, headers=headers)
 
-    return data
     
 
 @app.get("/test")           #endpoint, or route, always starts with a forward slash
