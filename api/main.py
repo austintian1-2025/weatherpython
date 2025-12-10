@@ -3,6 +3,7 @@ from fastapi import FastAPI
 #from fastapi.staticfiles import StaticFiles
 from fastapi.templating import Jinja2Templates
 # from fastapi.templating import Jinja2Templates
+from django.http import HttpResponse
 
 # 1. Data Source (In-Memory List)
 # This list simulates a simple, pre-defined dataset.
