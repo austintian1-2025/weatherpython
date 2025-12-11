@@ -64,7 +64,7 @@ def read_items():
 @app.get("/items/", response_class=HTMLResponse)
 async def read_item(request: Request, id: str):
     return templates.TemplateResponse(
-        request=request, name="index.html",
+        request=request, name="index.html"
     )
 
 # TO RUN:
